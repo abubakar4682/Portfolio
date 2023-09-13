@@ -179,7 +179,7 @@ class HomePage extends StatelessWidget {
           _buildCopyRightText(context),
           SizedBox(
               height: ResponsiveWidget.isSmallScreen(context) ? 12.0 : 0.0),
-          _buildSocialIcons(),
+          //_buildSocialIcons(),
           SizedBox(
               height: ResponsiveWidget.isSmallScreen(context) ? 12.0 : 0.0),
         ],
@@ -348,12 +348,12 @@ class HomePage extends StatelessWidget {
       'AI-PIXCAL',
       'Junior Flutter Developer',
     ),
-    // Education(
-    //   'Apr 2016',
-    //   'Apr 2018',
-    //   'TEO International',
-    //   'Sr. Software Engineer',
-    // ),
+    Education(
+      'Apr 2018',
+      'Apr 2012',
+      'FAST Nu',
+          '',
+    ),
 
   ];
 
@@ -420,23 +420,23 @@ class HomePage extends StatelessWidget {
     return Column(
       children: <Widget>[
         Divider(),
-        Padding(
-          padding: EdgeInsets.all(12.0),
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Align(
-                child: _buildCopyRightText(context),
-                alignment: Alignment.centerLeft,
-              ),
-              Align(
-                child: _buildSocialIcons(),
-                alignment: Alignment.centerRight,
-              ),
-            ],
-          ),
-        ),
+        // Padding(
+        //   padding: EdgeInsets.all(12.0),
+        //   child: Row(
+        //     mainAxisSize: MainAxisSize.max,
+        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //     children: <Widget>[
+        //       Align(
+        //         child: _buildCopyRightText(context),
+        //         alignment: Alignment.centerLeft,
+        //       ),
+        //       Align(
+        //         child: _buildSocialIcons(),
+        //         alignment: Alignment.centerRight,
+        //       ),
+        //     ],
+        //   ),
+        // ),
       ],
     );
   }
@@ -450,62 +450,62 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _buildSocialIcons() {
-    return Row(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        GestureDetector(
-          onTap: () {
-            html.window
-                .open("https://www.linkedin.com/in/zubairehman/", "LinkedIn");
-          },
-          child: Image.asset('assets/images/WhatsApp Image 2023-05-16 at 12.54.36 PM.jpeg',
-
-            color: Color(0xFF45405B),
-            height: 20.0,
-            width: 20.0,
-          ),
-        ),
-        SizedBox(width: 16.0),
-        GestureDetector(
-          onTap: () {
-            html.window.open("https://medium.com/@zubairehman.work", "Medium");
-          },
-          child: Image.network(
-            images.evernote,
-            color: Color(0xFF45405B),
-            height: 20.0,
-            width: 20.0,
-          ),
-        ),
-        SizedBox(width: 16.0),
-        GestureDetector(
-          onTap: () {
-            html.window.open("https://github.com/zubairehman", "Github");
-          },
-          child: Image.network(
-            images.google,
-            color: Color(0xFF45405B),
-            height: 20.0,
-            width: 20.0,
-          ),
-        ),
-        SizedBox(width: 16.0),
-        GestureDetector(
-          onTap: () {
-            html.window.open("https://twitter.com/zubair340", "Twitter");
-          },
-          child: Image.network(
-            images.twitter,
-            color: Color(0xFF45405B),
-            height: 20.0,
-            width: 20.0,
-          ),
-        ),
-      ],
-    );
-  }
+  // Widget _buildSocialIcons() {
+  //   return Row(
+  //     mainAxisSize: MainAxisSize.max,
+  //     mainAxisAlignment: MainAxisAlignment.center,
+  //     children: <Widget>[
+  //       GestureDetector(
+  //         onTap: () {
+  //           html.window
+  //               .open("https://www.linkedin.com/in/abubakar-habib-2aa549234/", "LinkedIn");
+  //         },
+  //         child: Image.asset('',
+  //
+  //           color: Color(0xFF45405B),
+  //           height: 20.0,
+  //           width: 20.0,
+  //         ),
+  //       ),
+  //       SizedBox(width: 16.0),
+  //       GestureDetector(
+  //         onTap: () {
+  //           html.window.open("https://www.linkedin.com/in/abubakar-habib-2aa549234/", "Medium");
+  //         },
+  //         child: Image.network(
+  //           images.evernote,
+  //           color: Color(0xFF45405B),
+  //           height: 20.0,
+  //           width: 20.0,
+  //         ),
+  //       ),
+  //       SizedBox(width: 16.0),
+  //       GestureDetector(
+  //         onTap: () {
+  //           html.window.open("https://github.com/abubakar4682/Portfolio", "Github");
+  //         },
+  //         child: Image.network(
+  //           images.google,
+  //           color: Color(0xFF45405B),
+  //           height: 20.0,
+  //           width: 20.0,
+  //         ),
+  //       ),
+  //       SizedBox(width: 16.0),
+  //       GestureDetector(
+  //         onTap: () {
+  //           html.window.open("", "Twitter");
+  //         },
+  //         child: Image.network(
+  //           images.twitter,
+  //           color: Color(0xFF45405B),
+  //           height: 20.0,
+  //           width: 20.0,
+  //         ),
+  //       ),
+  //     ],
+  //   );
+  // }
 }
 class images {
   images._();
@@ -513,7 +513,7 @@ class images {
   static const String programmer3 = 'assets/images/profile.jpeg';
 
   // social icons
-  static const String dribble = 'assets/images/WhatsApp Image 2023-05-16 at 12.54.36 PM.jpeg';
+  static const String dribble = '';
   static const String evernote = 'assets/images/WhatsApp Image 2023-05-16 at 12.54.36 PM.jpeg';
   static const String google = 'assets/images/WhatsApp Image 2023-05-16 at 12.54.36 PM.jpeg';
   static const String twitter = 'assets/images/WhatsApp Image 2023-05-16 at 12.54.36 PM.jpeg';
